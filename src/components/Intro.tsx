@@ -1,4 +1,5 @@
 import React from 'react'
+import BlurText from '../react-bits/BlurText'
 
 interface IntroProps {
   setActiveSection: (section: string) => void
@@ -27,13 +28,21 @@ const Intro: React.FC<IntroProps> = ({ setActiveSection }) => {
             SRINJOY SINHA
           </div>
           
-          <div className="text-xl md:text-2xl text-secondary mb-12 leading-8 text-left mt-6">
-            High-Performance Systems Engineer
-          </div>
+          <BlurText
+            text="High-Performance Systems Engineer"
+            delay={200}
+            animateBy="words"
+            direction="top"
+            className="text-xl md:text-2xl text-secondary mb-12 leading-8 text-left mt-6"
+          />
           
-          <div className="text-lg text-secondary mb-16 leading-relaxed text-left mt-8">
-            AI Engineer specializing in Retrieval-Augmented Generation, scalable AI pipelines, and production-ready full-stack architecture.
-          </div>
+          <BlurText
+            text="AI Engineer specializing in Retrieval-Augmented Generation, scalable AI pipelines, and production-ready full-stack architecture."
+            delay={200}
+            animateBy="words"
+            direction="top"
+            className="text-lg text-secondary mb-16 leading-relaxed text-left mt-8"
+          />
           
           <div className="flex flex-col sm:flex-row gap-6 justify-start items-center mb-16 mt-8">
             <button 
