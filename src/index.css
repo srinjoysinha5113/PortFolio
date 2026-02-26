@@ -1,0 +1,210 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Controlled Aggression Design System */
+
+:root {
+  /* Color System */
+  --bg-primary: #0C0C0F;
+  --bg-surface: #151518;
+  --text-primary: #EDEDED;
+  --text-secondary: #8A8A8F;
+  --accent-primary: #8E1B1B;
+  --accent-hover: #A61E1E;
+  
+  /* Typography */
+  --font-hero: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Spacing */
+  --section-spacing: 6rem;
+  --content-max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Background System with Blueprint Grid */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 30%, #141418 0%, var(--bg-primary) 65%),
+    linear-gradient(rgba(142, 27, 27, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(142, 27, 27, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  z-index: -1;
+}
+
+/* Typography Classes */
+.hero-heading {
+  font-family: var(--font-hero);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.section-title {
+  font-family: var(--font-hero);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.section-label .number {
+  color: var(--accent-primary);
+}
+
+/* Button System */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: rgba(166, 30, 30, 0.1);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* Card System */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 200ms ease-out;
+}
+
+.card:hover {
+  border-color: var(--accent-hover);
+  transform: translateY(-4px);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 72rem; /* 6xl */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+.section {
+  padding: clamp(5rem, 12vw, 9rem) 0;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 9rem 0;
+  }
+}
+
+/* Minimum Margins */
+.mb-2 { margin-bottom: 5px; }
+.mb-3 { margin-bottom: 10px; }
+.mb-4 { margin-bottom: 15px; }
+.mb-6 { margin-bottom: 20px; }
+.mb-8 { margin-bottom: 25px; }
+.mb-12 { margin-bottom: 30px; }
+.mb-16 { margin-bottom: 35px; }
+
+.mt-2 { margin-top: 5px; }
+.mt-3 { margin-top: 10px; }
+.mt-4 { margin-top: 15px; }
+.mt-6 { margin-top: 20px; }
+.mt-8 { margin-top: 25px; }
+.mt-12 { margin-top: 30px; }
+.mt-16 { margin-top: 35px; }
+.mt-24 { margin-top: 40px; }
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Improved Typography Line Height */
+.leading-8 {
+  line-height: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-heading {
+    text-align: center;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+  
+  .section-label {
+    text-align: center;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
