@@ -13,7 +13,6 @@ import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('intro')
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="relative min-h-screen bg-primary">
@@ -31,8 +30,6 @@ function App() {
       <SideBar 
         activeSection={activeSection} 
         setActiveSection={setActiveSection}
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
       />
       
       <main className="relative z-10">
