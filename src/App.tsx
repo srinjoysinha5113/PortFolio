@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Certifications from './components/Certifications'
 import Education from './components/Education'
 import Contact from './components/Contact'
+import DarkVeil from './react-bits/DarkVeil'
 import './App.css'
 
 function App() {
@@ -16,7 +17,16 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-primary">
-      <div className="app-background" />
+      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
+        <DarkVeil
+          hueShift={240}
+          noiseIntensity={0.02}
+          scanlineIntensity={0.1}
+          speed={1}
+          scanlineFrequency={2}
+          warpAmount={0.02}
+        />
+      </div>
       
       <SideBar 
         activeSection={activeSection} 
