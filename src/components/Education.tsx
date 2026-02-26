@@ -7,9 +7,7 @@ const Education = () => {
         </div>
         
         <h2 className="section-title mb-16">
-          Academic
-          <br />
-          Background
+          Academic Background
         </h2>
         
         <div className="max-w-4xl">

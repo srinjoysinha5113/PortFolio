@@ -28,9 +28,7 @@ const Projects = () => {
         </div>
         
         <h2 className="section-title mb-16">
-          Engineering
-          <br />
-          Projects
+          Engineering Projects
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10">
@@ -53,12 +51,6 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-16">
-          <button className="btn-primary px-6 py-3">
-            View Complete Project Archive
-          </button>
         </div>
       </div>
     </section>

@@ -7,9 +7,7 @@ const Experience = () => {
         </div>
         
         <h2 className="section-title mb-16">
-          Professional
-          <br />
-          Experience
+          Professional Experience
         </h2>
         
         <div className="max-w-4xl">

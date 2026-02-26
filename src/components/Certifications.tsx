@@ -13,27 +13,32 @@ const Certifications = () => {
     {
       title: "Microsoft Azure",
       issuer: "Microsoft Learn × FICE",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      description: ""
     },
     {
       title: "Microsoft Copilot",
       issuer: "Microsoft Learn × FICE",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      description: ""
     },
     {
       title: "Power BI for Business Applications",
       issuer: "Microsoft Learn × FICE",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      description: ""
     },
     {
       title: "Technology Job Simulation",
       issuer: "Deloitte",
-      date: "Jul 2025"
+      date: "Jul 2025",
+      description: ""
     },
     {
       title: "Data Analytics Job Simulation",
       issuer: "Deloitte",
-      date: "Jul 2025"
+      date: "Jul 2025",
+      description: ""
     }
   ]
 
@@ -45,23 +50,25 @@ const Certifications = () => {
         </div>
         
         <h2 className="section-title mb-16">
-          Professional
-          <br />
-          Certifications
+          Professional Certifications
         </h2>
         
-        <div className="max-w-4xl space-y-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10">
           {certifications.map((cert, index) => (
-            <div key={index} className="flex flex-col md:flex-row md:justify-between md:items-start pb-4 border-b border-accent-primary/10 last:border-0">
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-primary mb-1">
-                  {cert.title}
-                </h3>
-                <div className="text-secondary text-sm">
-                  {cert.issuer}
-                </div>
+            <div key={index} className="card group cursor-pointer">
+              <div className="text-accent-primary font-medium mb-2">
+                0{index + 1} — {cert.title}
               </div>
-              <div className="text-secondary text-sm mt-1 md:mt-0">
+              
+              <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
+                {cert.issuer}
+              </div>
+              
+              <p className="text-secondary mb-4 leading-relaxed text-sm">
+                {cert.description}
+              </p>
+              
+              <div className="text-xs text-accent-primary font-mono mb-4">
                 {cert.date}
               </div>
             </div>
