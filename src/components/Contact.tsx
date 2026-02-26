@@ -42,9 +42,7 @@ const Contact = () => {
         
         <div className="text-left">
           <h2 className="section-title mb-8 text-left">
-            Let's build
-            <br />
-            high-performance systems.
+            Let's build high-performance systems.
           </h2>
           
           <div className="flex justify-start items-center gap-8 mb-16">
@@ -88,7 +86,7 @@ const Contact = () => {
             </button>
             
             <button
-              onClick={() => window.open('/src/assets/Srinjoy_Sinha_Resume.pdf', '_blank')}
+              onClick={() => window.open('/Srinjoy_Sinha_Resume.pdf', '_blank')}
               className="text-secondary hover:text-primary transition-colors duration-200 flex flex-col items-center gap-2"
               title="Download Resume"
             >

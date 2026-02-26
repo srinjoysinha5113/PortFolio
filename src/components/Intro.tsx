@@ -11,7 +11,7 @@ const Intro: React.FC<IntroProps> = ({ setActiveSection }) => {
     } else if (type === "linkedin") {
       window.open("https://www.linkedin.com/in/srinjoy-sinha-508963276/", '_blank')
     } else if (type === "resume") {
-      window.open('/src/assets/Srinjoy_Sinha_Resume.pdf', '_blank')
+      window.open('/Srinjoy_Sinha_Resume.pdf', '_blank')
     }
   }
 
