@@ -27,8 +27,10 @@ const SideBar: React.FC<SideBarProps> = ({
     { id: 'intro', label: 'Intro' },
     { id: 'summary', label: 'Summary' },
     { id: 'core-skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'certifications', label: 'Certifications' },
+    { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' }
   ]
 
