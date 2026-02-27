@@ -86,7 +86,7 @@ const Contact = () => {
             </button>
             
             <button
-              onClick={() => window.open('Srinjoy_Sinha_Resume.pdf', '_blank')}
+              onClick={() => window.open(`/Srinjoy_Sinha_Resume.pdf?v=${Date.now()}`, '_blank')}
               className="text-secondary hover:text-primary transition-colors duration-200 flex flex-col items-center gap-2"
               title="Download Resume"
             >
