@@ -6,7 +6,7 @@ const Certifications = () => {
   const [showDialog, setShowDialog] = useState(false)
 
   const handleCertClick = (cert: any) => {
-    if (cert.title === "Technology Job Simulation" && cert.credentialId) {
+    if (cert.description && cert.description !== "" && cert.skills && cert.thumbnail) {
       setSelectedCert(cert)
       setShowDialog(true)
     }
@@ -20,30 +20,47 @@ const Certifications = () => {
     {
       title: "Artificial Intelligence & Machine Learning",
       issuer: "Microsoft Learn × FICE",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      description: "A 20-hour comprehensive program on the fundamentals of AI and ML models.",
+      credentialId: "-",
+      skills: ["Artificial Intelligence (AI), Machine Learning (ML), Neural Networks, Data Science"],
+      thumbnail: "AIML-MICROSOFT-FICE-CERTIFICATE.png"
     },
     {
       title: "Cloud Administration & Engineering",
       issuer: "Microsoft Learn × FICE",
-      date: "Dec 2025"
+      date: "Dec 2025",
+      description: "Completed an intensive 40-hour course covering the architecture and management of cloud environments.",
+      credentialId: "-",
+      skills: ["Cloud Infrastructure, Systems Engineering, IT Operations, Resource Management"],
+      thumbnail: "CLOUD-ADMINISTRATION-&-ENGG-MICROSOFT-FICE-CERTIFICATE.png"
     },
     {
       title: "Microsoft Azure",
       issuer: "Microsoft Learn × FICE",
       date: "Dec 2025",
-      description: ""
+      description: "Focused on implementing and managing core Azure cloud services.",
+      credentialId: "-",
+      skills: ["Microsoft Azure, Cloud Computing, Azure Services, Virtualization"],
+      thumbnail: "AZURE-MICROSOFT-FICE-CERTIFICATE.png"
     },
     {
       title: "Microsoft Copilot",
       issuer: "Microsoft Learn × FICE",
       date: "Dec 2025",
-      description: ""
+      description: "Worked with tools like Microsoft Copilot, Generative AI, Microsoft 365.",
+      credentialId: "-",
+      skills: ["Microsoft Copilot, Generative AI, Microsoft 365"],
+      thumbnail: "COPILOT-MICROSOFT-FICE-CERTIFICATE.png"
     },
     {
       title: "Power BI for Business Applications",
       issuer: "Microsoft Learn × FICE",
       date: "Dec 2025",
-      description: ""
+      description: "Completed a 20-hour specialized course on Microsoft Learn focused on leveraging Power BI for data-driven business decision-making.",
+      credentialId: "-",
+      skills: ["Power BI, Data Visualization, Business Intelligence, Data Analysis"],
+      thumbnail: "POWER-BI-MICROSOFT-FICE-CERTIFICATE.png"
     },
     {
       title: "Technology Job Simulation",
@@ -58,7 +75,10 @@ const Certifications = () => {
       title: "Data Analytics Job Simulation",
       issuer: "Deloitte",
       date: "Jul 2025",
-      description: ""
+      description: "Completed a practical job simulation through Forage involving real-world tasks at Deloitte, including data analysis.",
+      credentialId: "qHiBXXDwjACDbyma3",
+      skills: ["Data Analysis, Forensic Technology, Data Visualization, Tableau"],
+      thumbnail: "Deloitte-Data-Analytics-Job-Simulation.png"
     }
   ]
 
@@ -82,7 +102,7 @@ const Certifications = () => {
                     className="card group cursor-pointer p-6 relative" 
                     spotlightColor="rgba(255, 0, 0, 0.1)"
                   >
-                    {cert.title === "Technology Job Simulation" && (
+                    {cert.description && cert.description !== "" && cert.skills && cert.thumbnail && (
                       <div className="absolute bottom-2 right-2 text-accent-primary text-lg font-bold">
                         +
                       </div>
@@ -95,7 +115,7 @@ const Certifications = () => {
                       {cert.issuer}
                     </div>
                     
-                    {cert.title !== "Technology Job Simulation" && (
+                    {!(cert.description && cert.description !== "" && cert.skills && cert.thumbnail) && (
                       <p className="text-secondary mb-4 leading-relaxed text-sm">
                         {cert.description}
                       </p>
@@ -108,7 +128,7 @@ const Certifications = () => {
                 </div>
               </div>
               <div className="md:hidden card group cursor-pointer p-6 relative" onClick={() => handleCertClick(cert)}>
-                {cert.title === "Technology Job Simulation" && (
+                {cert.description && cert.description !== "" && cert.skills && cert.thumbnail && (
                   <div className="absolute bottom-2 right-2 text-accent-primary text-lg font-bold">
                     +
                   </div>
@@ -121,7 +141,7 @@ const Certifications = () => {
                   {cert.issuer}
                 </div>
                 
-                {cert.title !== "Technology Job Simulation" && (
+                {!(cert.description && cert.description !== "" && cert.skills && cert.thumbnail) && (
                   <p className="text-secondary mb-4 leading-relaxed text-sm">
                     {cert.description}
                   </p>
@@ -146,7 +166,7 @@ const Certifications = () => {
                   {selectedCert.title}
                 </h3>
                 <div className="text-accent-primary font-medium text-sm">
-                  Deloitte • {selectedCert.date}
+                  {selectedCert.issuer} • {selectedCert.date}
                 </div>
               </div>
               <button 
