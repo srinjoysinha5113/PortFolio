@@ -1,3 +1,5 @@
+import SpotlightCard from '../react-bits/SpotlightCard'
+
 const Certifications = () => {
   const certifications = [
     {
@@ -53,23 +55,44 @@ const Certifications = () => {
           Professional Certifications
         </h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {certifications.map((cert, index) => (
-            <div key={index} className="card group cursor-pointer">
-              <div className="text-accent-primary font-medium mb-2">
-                0{index + 1} — {cert.title}
+            <div key={index}>
+              <div className="hidden md:block">
+                <SpotlightCard className="card group cursor-pointer p-6" spotlightColor="rgba(255, 0, 0, 0.2)">
+                  <div className="text-accent-primary font-medium mb-2">
+                    0{index + 1} — {cert.title}
+                  </div>
+                  
+                  <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
+                    {cert.issuer}
+                  </div>
+                  
+                  <p className="text-secondary mb-4 leading-relaxed text-sm">
+                    {cert.description}
+                  </p>
+                  
+                  <div className="text-xs text-accent-primary font-mono mb-4">
+                    {cert.date}
+                  </div>
+                </SpotlightCard>
               </div>
-              
-              <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
-                {cert.issuer}
-              </div>
-              
-              <p className="text-secondary mb-4 leading-relaxed text-sm">
-                {cert.description}
-              </p>
-              
-              <div className="text-xs text-accent-primary font-mono mb-4">
-                {cert.date}
+              <div className="md:hidden card group cursor-pointer p-6">
+                <div className="text-accent-primary font-medium mb-2">
+                  0{index + 1} — {cert.title}
+                </div>
+                
+                <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
+                  {cert.issuer}
+                </div>
+                
+                <p className="text-secondary mb-4 leading-relaxed text-sm">
+                  {cert.description}
+                </p>
+                
+                <div className="text-xs text-accent-primary font-mono mb-4">
+                  {cert.date}
+                </div>
               </div>
             </div>
           ))}

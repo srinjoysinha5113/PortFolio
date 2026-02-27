@@ -1,3 +1,5 @@
+import SpotlightCard from '../react-bits/SpotlightCard'
+
 const Education = () => {
   return (
     <section id="education" className="section">
@@ -10,8 +12,24 @@ const Education = () => {
           Academic Background
         </h2>
         
-        <div className="max-w-4xl">
-          <div className="space-y-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="hidden md:block">
+            <SpotlightCard className="card p-6" spotlightColor="rgba(255, 0, 0, 0.2)">
+              <h3 className="text-xl font-semibold text-primary">
+                Heritage Institute of Technology, Kolkata
+              </h3>
+              <div className="text-lg text-accent-primary">
+                Bachelor of Technology — Computer Science Engineering
+              </div>
+              <div className="text-secondary">
+                2023 – 2027
+              </div>
+              <div className="text-secondary">
+                GPA: 7.53 / 10
+              </div>
+            </SpotlightCard>
+          </div>
+          <div className="md:hidden card p-6">
             <h3 className="text-xl font-semibold text-primary">
               Heritage Institute of Technology, Kolkata
             </h3>

@@ -40,12 +40,12 @@ const Contact = () => {
           <span className="number">08</span> — CONTACT
         </div>
         
-        <div className="text-left">
-          <h2 className="section-title mb-8 text-left">
+        <div className="text-left md:text-center">
+          <h2 className="section-title mb-8 text-left md:text-center">
             Let's build high-performance systems.
           </h2>
           
-          <div className="flex justify-start items-center gap-8 mb-16">
+          <div className="flex justify-center md:justify-center items-center gap-8 mb-16">
             <button
               onClick={() => handleContactClick(contactInfo[0])}
               className="text-secondary hover:text-primary transition-colors duration-200 flex flex-col items-center gap-2"
@@ -84,16 +84,22 @@ const Contact = () => {
               </div>
               <span className="text-xs">GitHub</span>
             </button>
-          </div>
-          
-          <div className="mb-16">
+            
             <button
               onClick={() => window.open('/Srinjoy_Sinha_Resume.pdf', '_blank')}
-              className="btn-primary px-6 py-3"
+              className="text-secondary hover:text-primary transition-colors duration-200 flex flex-col items-center gap-2"
               title="Download Resume"
             >
-              Download Resume
+              <div className="w-8 h-8">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+              </div>
+              <span className="text-xs">Resume</span>
             </button>
+          </div>
+          
+          <div className="mb-16 text-center">
           </div>
         </div>
       </div>

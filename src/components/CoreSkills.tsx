@@ -1,3 +1,5 @@
+import SpotlightCard from '../react-bits/SpotlightCard'
+
 const CoreSkills = () => {
   const skills = {
     "AI & Machine Learning": [
@@ -64,18 +66,34 @@ const CoreSkills = () => {
           Technical Expertise
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {Object.entries(skills).map(([category, skillList]) => (
-            <div key={category} className="space-y-4">
-              <h3 className="text-lg font-semibold text-accent-primary">
-                {category}
-              </h3>
-              <div className="space-y-2">
-                {skillList.map((skill) => (
-                  <div key={skill} className="text-secondary text-sm">
-                    {skill}
+            <div key={category}>
+              <div className="hidden md:block">
+                <SpotlightCard className="card space-y-4" spotlightColor="rgba(255, 0, 0, 0.2)">
+                  <h3 className="text-lg font-semibold text-accent-primary">
+                    {category}
+                  </h3>
+                  <div className="space-y-2">
+                    {skillList.map((skill) => (
+                      <div key={skill} className="text-secondary text-sm">
+                        {skill}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </SpotlightCard>
+              </div>
+              <div className="md:hidden card space-y-4">
+                <h3 className="text-lg font-semibold text-accent-primary">
+                  {category}
+                </h3>
+                <div className="space-y-2">
+                  {skillList.map((skill) => (
+                    <div key={skill} className="text-secondary text-sm">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

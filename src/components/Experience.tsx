@@ -1,3 +1,5 @@
+import SpotlightCard from '../react-bits/SpotlightCard'
+
 const Experience = () => {
   return (
     <section id="experience" className="section">
@@ -10,8 +12,29 @@ const Experience = () => {
           Professional Experience
         </h2>
         
-        <div className="max-w-4xl">
-          <div className="card">
+        <div className="max-w-4xl mx-auto">
+          <div className="hidden md:block">
+            <SpotlightCard className="card p-6" spotlightColor="rgba(255, 0, 0, 0.2)">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-primary mb-2">
+                    Jindal Power Limited
+                  </h3>
+                  <div className="text-accent-primary font-medium mb-2">
+                    AI & Full Stack Intern
+                  </div>
+                </div>
+                <div className="text-secondary text-sm">
+                  Jan 2026 – Mar 2026
+                </div>
+              </div>
+              
+              <div className="text-secondary mb-6">
+                Engineered enterprise-grade AI and workflow systems with production-level architecture and security.
+              </div>
+            </SpotlightCard>
+          </div>
+          <div className="md:hidden card p-6">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2">
