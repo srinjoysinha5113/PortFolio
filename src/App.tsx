@@ -8,7 +8,7 @@ import Projects from './components/Projects'
 import Certifications from './components/Certifications'
 import Education from './components/Education'
 import Contact from './components/Contact'
-import DarkVeil from './react-bits/DarkVeil'
+import Particles from './react-bits/Particles'
 import './App.css'
 
 function App() {
@@ -17,13 +17,18 @@ function App() {
   return (
     <div className="relative min-h-screen bg-primary">
       <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
-        <DarkVeil
-          hueShift={240}
-          noiseIntensity={0.02}
-          scanlineIntensity={0.1}
-          speed={1}
-          scanlineFrequency={2}
-          warpAmount={0.02}
+        <Particles
+          particleCount={100}
+          particleSpread={10}
+          speed={0.05}
+          particleColors={["#ffffff","#ff0000","#ff0000"]}
+          moveParticlesOnHover
+          particleHoverFactor={1.9}
+          alphaParticles={false}
+          particleBaseSize={70}
+          sizeRandomness={1}
+          cameraDistance={40}
+          disableRotation
         />
       </div>
       
