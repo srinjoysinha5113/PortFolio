@@ -38,7 +38,7 @@ const Intro: React.FC<IntroProps> = ({ setActiveSection }) => {
           
           <BlurText
             text="AI Engineer specializing in Retrieval-Augmented Generation, scalable AI pipelines, and production-ready full-stack architecture."
-            delay={200}
+            delay={50}
             animateBy="words"
             direction="top"
             className="text-lg text-secondary mb-16 leading-relaxed text-left mt-8"

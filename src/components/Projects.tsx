@@ -37,7 +37,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index}>
               <div className="hidden md:block">
-                <SpotlightCard className="card group cursor-pointer p-6" spotlightColor="rgba(255, 0, 0, 0.7)">
+                <SpotlightCard className="card group cursor-pointer p-6" spotlightColor="rgba(255, 0, 0, 0.1)">
                   <div className="text-accent-primary font-medium mb-2">
                     0{index + 1} — {project.title}
                   </div>

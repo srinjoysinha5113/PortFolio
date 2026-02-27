@@ -14,7 +14,7 @@ const Education = () => {
         
         <div className="max-w-4xl mx-auto">
           <div className="hidden md:block">
-            <SpotlightCard className="card p-6" spotlightColor="rgba(255, 0, 0, 0.2)">
+            <SpotlightCard className="card p-6" spotlightColor="rgba(255, 0, 0, 0.1)">
               <h3 className="text-xl font-semibold text-primary">
                 Heritage Institute of Technology, Kolkata
               </h3>

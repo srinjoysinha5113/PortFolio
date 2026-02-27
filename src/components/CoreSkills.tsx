@@ -70,7 +70,7 @@ const CoreSkills = () => {
           {Object.entries(skills).map(([category, skillList]) => (
             <div key={category}>
               <div className="hidden md:block">
-                <SpotlightCard className="card space-y-4" spotlightColor="rgba(255, 0, 0, 0.2)">
+                <SpotlightCard className="card space-y-4" spotlightColor="rgba(255, 0, 0, 0.1)">
                   <h3 className="text-lg font-semibold text-accent-primary">
                     {category}
                   </h3>
