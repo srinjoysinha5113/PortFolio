@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { Suspense, lazy, useState } from 'react'
 import SideBar from './components/SideBar'
 import Intro from './components/Intro'
-import Summary from './components/Summary'
-import CoreSkills from './components/CoreSkills'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Certifications from './components/Certifications'
-import Education from './components/Education'
-import Contact from './components/Contact'
 import Particles from './react-bits/Particles'
 import './App.css'
 
+const Summary = lazy(() => import('./components/Summary'))
+const CoreSkills = lazy(() => import('./components/CoreSkills'))
+const Experience = lazy(() => import('./components/Experience'))
+const Projects = lazy(() => import('./components/Projects'))
+const Certifications = lazy(() => import('./components/Certifications'))
+const Education = lazy(() => import('./components/Education'))
+const Contact = lazy(() => import('./components/Contact'))
+
 function App() {
   const [activeSection, setActiveSection] = useState('intro')
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
 
   return (
     <div className="relative min-h-screen bg-primary">
@@ -25,7 +27,7 @@ function App() {
           top: 0, 
           left: 0, 
           zIndex: 0,
-          backgroundImage: 'url(/PortFolio-Background.png)',
+          backgroundImage: 'url(/PortFolio-Background.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -35,7 +37,7 @@ function App() {
       {/* Particles Overlay */}
       <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 1 }}>
         <Particles
-          particleCount={100}
+          particleCount={isMobile ? 40 : 100}
           particleSpread={10}
           speed={0.05}
           particleColors={["#ffffff","#ffffff","#ffffff"]}
@@ -56,13 +58,15 @@ function App() {
       
       <main className="relative z-10">
         <Intro setActiveSection={setActiveSection} />
-        <Summary />
-        <CoreSkills />
-        <Experience />
-        <Projects />
-        <Certifications />
-        <Education />
-        <Contact />
+        <Suspense fallback={<div className="h-20" />}>
+          <Summary />
+          <CoreSkills />
+          <Experience />
+          <Projects />
+          <Certifications />
+          <Education />
+          <Contact />
+        </Suspense>
       </main>
     </div>
   );

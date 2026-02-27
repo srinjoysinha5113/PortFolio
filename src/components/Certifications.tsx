@@ -24,7 +24,7 @@ const Certifications = () => {
       description: "A 20-hour comprehensive program on the fundamentals of AI and ML models.",
       credentialId: "-",
       skills: ["Artificial Intelligence (AI), Machine Learning (ML), Neural Networks, Data Science"],
-      thumbnail: "AIML-MICROSOFT-FICE-CERTIFICATE.png"
+      thumbnail: "AIML-MICROSOFT-FICE-CERTIFICATE.webp"
     },
     {
       title: "Cloud Administration & Engineering",
@@ -33,7 +33,7 @@ const Certifications = () => {
       description: "Completed an intensive 40-hour course covering the architecture and management of cloud environments.",
       credentialId: "-",
       skills: ["Cloud Infrastructure, Systems Engineering, IT Operations, Resource Management"],
-      thumbnail: "CLOUD-ADMINISTRATION-&-ENGG-MICROSOFT-FICE-CERTIFICATE.png"
+      thumbnail: "CLOUD-ADMINISTRATION-&-ENGG-MICROSOFT-FICE-CERTIFICATE.webp"
     },
     {
       title: "Microsoft Azure",
@@ -42,7 +42,7 @@ const Certifications = () => {
       description: "Focused on implementing and managing core Azure cloud services.",
       credentialId: "-",
       skills: ["Microsoft Azure, Cloud Computing, Azure Services, Virtualization"],
-      thumbnail: "AZURE-MICROSOFT-FICE-CERTIFICATE.png"
+      thumbnail: "AZURE-MICROSOFT-FICE-CERTIFICATE.webp"
     },
     {
       title: "Microsoft Copilot",
@@ -51,7 +51,7 @@ const Certifications = () => {
       description: "Worked with tools like Microsoft Copilot, Generative AI, Microsoft 365.",
       credentialId: "-",
       skills: ["Microsoft Copilot, Generative AI, Microsoft 365"],
-      thumbnail: "COPILOT-MICROSOFT-FICE-CERTIFICATE.png"
+      thumbnail: "COPILOT-MICROSOFT-FICE-CERTIFICATE.webp"
     },
     {
       title: "Power BI for Business Applications",
@@ -60,7 +60,7 @@ const Certifications = () => {
       description: "Completed a 20-hour specialized course on Microsoft Learn focused on leveraging Power BI for data-driven business decision-making.",
       credentialId: "-",
       skills: ["Power BI, Data Visualization, Business Intelligence, Data Analysis"],
-      thumbnail: "POWER-BI-MICROSOFT-FICE-CERTIFICATE.png"
+      thumbnail: "POWER-BI-MICROSOFT-FICE-CERTIFICATE.webp"
     },
     {
       title: "Technology Job Simulation",
@@ -69,7 +69,7 @@ const Certifications = () => {
       description: "Participated in a simulated work environment at Deloitte via Forage, focusing on practical tasks in coding and development.",
       credentialId: "PkNzv5oCx3tEseTA4",
       skills: ["Software Coding, Development, Technical Problem Solving"],
-      thumbnail: "Deloitte-Technology-Job-Simulation.png"
+      thumbnail: "Deloitte-Technology-Job-Simulation.webp"
     },
     {
       title: "Data Analytics Job Simulation",
@@ -78,7 +78,7 @@ const Certifications = () => {
       description: "Completed a practical job simulation through Forage involving real-world tasks at Deloitte, including data analysis.",
       credentialId: "qHiBXXDwjACDbyma3",
       skills: ["Data Analysis, Forensic Technology, Data Visualization, Tableau"],
-      thumbnail: "Deloitte-Data-Analytics-Job-Simulation.png"
+      thumbnail: "Deloitte-Data-Analytics-Job-Simulation.webp"
     }
   ]
 
@@ -220,6 +220,7 @@ const Certifications = () => {
                 <div className="flex flex-col items-center justify-center">
                   <div className="bg-gray-800/50 rounded-lg px-12 py-10 border border-gray-700 w-full">
                     <img 
+                      loading="lazy"
                       src={`/${selectedCert.thumbnail}`} 
                       alt="Certificate thumbnail" 
                       className="w-full h-auto rounded"
