@@ -53,16 +53,16 @@ const SideBar: React.FC<SideBarProps> = ({
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary/95 md:backdrop-blur-md md:border-b md:border-accent-primary/10 pb-4' : 'bg-primary/95 md:backdrop-blur-sm pb-4'
+        isScrolled ? 'bg-primary/95 md:backdrop-blur-md pb-10' : 'bg-primary/95 md:backdrop-blur-sm pb-10'
       }`}>
-        <div className="container bg-primary/95 md:backdrop-blur-sm px-6 py-3">
-          <div className="flex justify-between items-center py-3">
+        <div className="container bg-primary/95 md:backdrop-blur-sm px-10 py-0">
+          <div className="flex justify-between items-center py-0">
             <div className="hidden md:flex justify-between items-center w-full space-x-12 lg:space-x-16 my-3">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative text-lg font-medium tracking-wide transition-colors duration-200 p-10 ${
+                  className={`relative text-xl font-medium tracking-wide transition-colors duration-200 p-10 ${
                     activeSection === item.id 
                       ? 'text-primary' 
                       : 'text-[#8A8A8F] hover:text-primary'
@@ -86,7 +86,7 @@ const SideBar: React.FC<SideBarProps> = ({
                 menuButtonColor="#ED EDED"
                 openMenuButtonColor="#8E1B1B"
                 changeMenuColorOnOpen={true}
-                colors={['#1A1A1A', '#8E1B1B']}
+                colors={['#EDEDED', '#8E1B1B']}
                 accentColor="#8E1B1B"
                 isFixed={true}
                 onMenuOpen={() => {}}

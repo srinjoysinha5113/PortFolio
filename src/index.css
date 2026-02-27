@@ -9,9 +9,9 @@
   --bg-primary: #0C0C0F;
   --bg-surface: #151518;
   --text-primary: #EDEDED;
-  --text-secondary: #8A8A8F;
-  --accent-primary: #8E1B1B;
-  --accent-hover: #A61E1E;
+  --text-secondary: #EDEDED;
+  --accent-primary: #c02323;
+  --accent-hover: #c02323;
   
   /* Typography */
   --font-hero: 'Inter', system-ui, -apple-system, sans-serif;

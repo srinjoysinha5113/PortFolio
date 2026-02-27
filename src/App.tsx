@@ -16,12 +16,29 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-primary">
-      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
+      {/* Background Image */}
+      <div 
+        style={{ 
+          width: '100vw', 
+          height: '100vh', 
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          zIndex: 0,
+          backgroundImage: 'url(/PortFolio-Background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Particles Overlay */}
+      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 1 }}>
         <Particles
           particleCount={100}
           particleSpread={10}
           speed={0.05}
-          particleColors={["#ffffff","#ff0000","#ff0000"]}
+          particleColors={["#ffffff","#ffffff","#ffffff"]}
           moveParticlesOnHover
           particleHoverFactor={1.9}
           alphaParticles={false}
