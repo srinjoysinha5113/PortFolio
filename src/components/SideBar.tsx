@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React from 'react'
 import StaggeredMenu from '../react-bits/StaggeredMenu'
 
 interface SideBarProps {
@@ -6,97 +6,46 @@ interface SideBarProps {
   setActiveSection: (section: string) => void
 }
 
-const SideBar: React.FC<SideBarProps> = ({ 
-  activeSection, 
-  setActiveSection 
+const SideBar: React.FC<SideBarProps> = ({
+  setActiveSection
 }) => {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const navItems = [
-    { id: 'intro', label: 'Intro' },
-    { id: 'summary', label: 'Summary' },
-    { id: 'core-skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'certifications', label: 'Certifications' },
-    { id: 'education', label: 'Education' },
-    { id: 'contact', label: 'Contact' }
+  const menuItems = [
+    { label: 'Home', ariaLabel: 'Go to home section', link: '#intro' },
+    { label: 'Summary', ariaLabel: 'Go to summary section', link: '#summary' },
+    { label: 'Skills', ariaLabel: 'Go to skills section', link: '#core-skills' },
+    { label: 'Experience', ariaLabel: 'Go to experience section', link: '#experience' },
+    { label: 'Projects', ariaLabel: 'Go to projects section', link: '#projects' },
+    { label: 'Certifications', ariaLabel: 'Go to certifications section', link: '#certifications' },
+    { label: 'Education', ariaLabel: 'Go to education section', link: '#education' },
+    { label: 'Contact', ariaLabel: 'Go to contact section', link: '#contact' }
   ]
-
-  const menuItems = navItems.map(item => ({
-    label: item.label,
-    ariaLabel: `Go to ${item.label} section`,
-    link: `#${item.id}`
-  }))
 
   const socialItems = [
     { label: 'LinkedIn', link: 'https://www.linkedin.com/in/srinjoy-sinha-508963276/' },
     { label: 'GitHub', link: 'https://github.com/srinjoysinha5113' }
   ]
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setActiveSection(sectionId)
-    }
-  }
-
   return (
-    <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary/95 md:backdrop-blur-md pb-10' : 'bg-primary/95 md:backdrop-blur-sm pb-10'
-      }`}>
-        <div className="container bg-primary/95 md:backdrop-blur-sm px-10 py-0">
-          <div className="flex justify-between items-center py-0">
-            <div className="hidden md:flex justify-between items-center w-full space-x-12 lg:space-x-16 my-3">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`relative text-xl font-medium tracking-wide transition-colors duration-200 p-10 ${
-                    activeSection === item.id 
-                      ? 'text-primary' 
-                      : 'text-[#8A8A8F] hover:text-primary'
-                  }`}
-                >
-                  {item.label}
-                  {activeSection === item.id && (
-                    <span className="absolute -bottom-2 left-0 right-0 h-12 bg-accent-primary" />
-                  )}
-                </button>
-              ))}
-            </div>
-
-            <div className="md:hidden relative">
-              <StaggeredMenu
-                position="left"
-                items={menuItems}
-                socialItems={socialItems}
-                displaySocials={true}
-                displayItemNumbering={false}
-                menuButtonColor="#ED EDED"
-                openMenuButtonColor="#8E1B1B"
-                changeMenuColorOnOpen={true}
-                colors={['#EDEDED', '#8E1B1B']}
-                accentColor="#8E1B1B"
-                isFixed={true}
-                onMenuOpen={() => {}}
-                onMenuClose={() => {}}
-              />
-            </div>
-          </div>
-        </div>
-      </nav>
-    </>
+    <StaggeredMenu
+      position="left"
+      items={menuItems}
+      socialItems={socialItems}
+      displaySocials={true}
+      displayItemNumbering={true}
+      menuButtonColor="#ffffff"
+      openMenuButtonColor="#fff"
+      changeMenuColorOnOpen={true}
+      colors={['#cf9797ff', '#ff2727ff']}
+      logoUrl="/Portfolio-Rel-Icon.webp"
+      accentColor="#ff2727"
+      isFixed={true}
+      onItemClick={(item) => {
+        const id = item.link.replace(/^#/, '')
+        setActiveSection(id)
+      }}
+      onMenuOpen={() => console.log('Menu opened')}
+      onMenuClose={() => console.log('Menu closed')}
+    />
   )
 }
 
