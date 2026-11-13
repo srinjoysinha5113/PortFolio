@@ -59,13 +59,9 @@ const CoreSkills = () => {
     <section id="core-skills" className="section">
       <div className="container max-w-6xl mx-auto px-6">
         <div className="section-label mb-6">
-          <span className="number">03</span> — CORE SKILLS
+          <span className="number">03</span> — SKILLS
         </div>
-        
-        <h2 className="section-title mb-16">
-          Technical Expertise
-        </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {Object.entries(skills).map(([category, skillList]) => (
             <div key={category}>

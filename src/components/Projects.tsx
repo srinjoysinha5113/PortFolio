@@ -9,7 +9,7 @@ const Projects = () => {
       techStack: "FastAPI, Python, React, FAISS, Ollama, Pandas, PyPDF, GSAP, Vite, Tesseract"
     },
     {
-      title: "Office Order Management System", 
+      title: "Office Order Management System",
       subtitle: "Secure HR-Tech Platform",
       description: "Developed full-stack system using React 19 + Node.js. Designed MySQL schema with RBAC and audit trails. Implemented JWT Auth, Joi validation, Helmet security. Built real-time dashboards for workflow tracking.",
       techStack: "React 19, Tailwind CSS 4, Node.js, Express.js, MySQL, JWT, Bcrypt, Multer, Joi, Vite"
@@ -28,11 +28,11 @@ const Projects = () => {
         <div className="section-label mb-6">
           <span className="number">05</span> — PROJECTS
         </div>
-        
+
         <h2 className="section-title mb-16">
-          Engineering Projects
+          Internship Projects
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {projects.map((project, index) => (
             <div key={index}>
@@ -41,15 +41,15 @@ const Projects = () => {
                   <div className="text-accent-primary font-medium mb-2">
                     0{index + 1} — {project.title}
                   </div>
-                  
+
                   <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
                     {project.subtitle}
                   </div>
-                  
+
                   <p className="text-secondary mb-4 leading-relaxed text-sm">
                     {project.description}
                   </p>
-                  
+
                   <div className="text-xs text-accent-primary font-mono mb-4">
                     {project.techStack}
                   </div>
@@ -59,15 +59,15 @@ const Projects = () => {
                 <div className="text-accent-primary font-medium mb-2">
                   0{index + 1} — {project.title}
                 </div>
-                
+
                 <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
                   {project.subtitle}
                 </div>
-                
+
                 <p className="text-secondary mb-4 leading-relaxed text-sm">
                   {project.description}
                 </p>
-                
+
                 <div className="text-xs text-accent-primary font-mono mb-4">
                   {project.techStack}
                 </div>

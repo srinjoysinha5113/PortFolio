@@ -88,18 +88,14 @@ const Certifications = () => {
         <div className="section-label mb-6">
           <span className="number">06</span> — CERTIFICATIONS
         </div>
-        
-        <h2 className="section-title mb-16">
-          Professional Certifications
-        </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {certifications.map((cert, index) => (
             <div key={index}>
               <div className="hidden md:block">
                 <div onClick={() => handleCertClick(cert)}>
-                  <SpotlightCard 
-                    className="card group cursor-pointer p-6 relative" 
+                  <SpotlightCard
+                    className="card group cursor-pointer p-6 relative"
                     spotlightColor="rgba(255, 0, 0, 0.1)"
                   >
                     {cert.description && cert.description !== "" && cert.skills && cert.thumbnail && (
@@ -110,17 +106,17 @@ const Certifications = () => {
                     <div className="text-accent-primary font-medium mb-2">
                       0{index + 1} — {cert.title}
                     </div>
-                    
+
                     <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
                       {cert.issuer}
                     </div>
-                    
+
                     {!(cert.description && cert.description !== "" && cert.skills && cert.thumbnail) && (
                       <p className="text-secondary mb-4 leading-relaxed text-sm">
                         {cert.description}
                       </p>
                     )}
-                    
+
                     <div className="text-xs text-accent-primary font-mono mb-4">
                       {cert.date}
                     </div>
@@ -136,17 +132,17 @@ const Certifications = () => {
                 <div className="text-accent-primary font-medium mb-2">
                   0{index + 1} — {cert.title}
                 </div>
-                
+
                 <div className="text-lg font-semibold text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
                   {cert.issuer}
                 </div>
-                
+
                 {!(cert.description && cert.description !== "" && cert.skills && cert.thumbnail) && (
                   <p className="text-secondary mb-4 leading-relaxed text-sm">
                     {cert.description}
                   </p>
                 )}
-                
+
                 <div className="text-xs text-accent-primary font-mono mb-4">
                   {cert.date}
                 </div>
@@ -169,16 +165,16 @@ const Certifications = () => {
                   {selectedCert.issuer} • {selectedCert.date}
                 </div>
               </div>
-              <button 
+              <button
                 onClick={closeDialog}
                 className="text-gray-400 hover:text-primary transition-colors duration-200 p-3 rounded-lg hover:bg-gray-800"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
                 </svg>
               </button>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Left Column - All Text Content */}
               <div className="space-y-8">
@@ -190,7 +186,7 @@ const Certifications = () => {
                     {selectedCert.credentialId}
                   </code>
                 </div>
-                
+
                 <div>
                   <div className="section-label mb-4">
                     <span className="number">SKILLS</span>
@@ -204,7 +200,7 @@ const Certifications = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div>
                   <div className="section-label mb-4">
                     <span className="number">INFO</span>
@@ -214,15 +210,15 @@ const Certifications = () => {
                   </p>
                 </div>
               </div>
-              
+
               {/* Right Column - Certificate Image Only */}
               {selectedCert.thumbnail && (
                 <div className="flex flex-col items-center justify-center">
                   <div className="bg-gray-800/50 rounded-lg px-12 py-10 border border-gray-700 w-full">
-                    <img 
+                    <img
                       loading="lazy"
-                      src={`/${selectedCert.thumbnail}`} 
-                      alt="Certificate thumbnail" 
+                      src={`/${selectedCert.thumbnail}`}
+                      alt="Certificate thumbnail"
                       className="w-full h-auto rounded"
                     />
                   </div>

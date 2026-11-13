@@ -7,11 +7,11 @@ const Experience = () => {
         <div className="section-label mb-6">
           <span className="number">04</span> — EXPERIENCE
         </div>
-        
+
         <h2 className="section-title mb-16">
           Professional Experience
         </h2>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="hidden md:block">
             <SpotlightCard className="card p-6" spotlightColor="rgba(255, 0, 0, 0.1)">
@@ -25,12 +25,12 @@ const Experience = () => {
                   </div>
                 </div>
                 <div className="text-secondary text-sm">
-                  Jan 2026 – Mar 2026
+                  Jan 2026 – July 2026
                 </div>
               </div>
-              
+
               <div className="text-secondary mb-6">
-                Engineered enterprise-grade AI and workflow systems with production-level architecture and security.
+                Joined as a Fullstack developer and later switch to an Applied AI engineer role. Worked on RAG Applications and fullstack web applications which helped in data retrival, query resolve times reduced, better handling of order issual and gate pass approvals allowing logs and tracking of each item.
               </div>
             </SpotlightCard>
           </div>
@@ -48,7 +48,7 @@ const Experience = () => {
                 Jan 2026 – Mar 2026
               </div>
             </div>
-            
+
             <div className="text-secondary mb-6">
               Engineered enterprise-grade AI and workflow systems with production-level architecture and security.
             </div>
